@@ -1,0 +1,38 @@
+<!-- index.wxml -->
+<view class="container">
+  <MyTitle></MyTitle>
+  <view class="nav_wrap">
+    <scroll-view class="nav" scroll-x="{{true}}">
+      <view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index === currentIndex ? 'active' : ''}}" wx:for="{{navList}}" wx:key="{{index}}">
+        {{item.text}}
+      </view>
+    </scroll-view>
+  </view>
+  <view class="sliders">
+    <swiper autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}" indicator-active-color="#f45a8d">
+      <swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+        <navigator class="" target="" url="">
+          <image mode="widthFix" src="{{item.imgSrc}}" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="video_wrap">
+    <navigator class="view_item" url="/pages/detial/detial?id={{item.id}}" wx:for="{{videoList}}" wx:key="{{index}}">
+      <view class="video_img">
+        <image mode="widthFix" class="" src="{{item.imgSrc}}" lazy-load="{{true}}" binderror="" bindload="" />
+        <view class="video_info">
+          <view class="play_count_wrap">
+            <text class="fa fa-play-circle-o"></text>
+            <text class="play_count">{{item.playCount}}</text>
+          </view>
+          <view class="comment_count_row">
+            <text class="fa fa-comment-o"></text>
+            <text class="comment_count">{{item.commentCount}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="video_title">{{item.desc}}</view>
+    </navigator>
+  </view>
+</view>

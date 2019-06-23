@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/chat/chat",
+    "pages/bar/bar",
+    "pages/me/me",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/settings/settings"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E12A1F",
+    "navigationBarTitleText": "本地生活",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#E12A1F",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [ 
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "assets/icon_home.png",         
+      "selectedIconPath":"assets/icon_home_selected.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "聊天",
+        "iconPath": "assets/icon_chat.png",
+        "selectedIconPath": "assets/icon_chat_selected.png"
+      },
+      {
+        "pagePath": "pages/bar/bar",
+        "text": "视频",
+        "iconPath": "assets/icon_chat.png",
+        "selectedIconPath": "assets/icon_chat_selected.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "assets/icon_mine.png",
+        "selectedIconPath": "assets/icon_mine_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
